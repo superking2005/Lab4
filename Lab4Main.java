@@ -23,8 +23,9 @@ public class Lab4Main {
 		} catch (IOException unableToCreate) {
 			System.out.println("File could not be created");
 		}
-		FileOutputStream fileStream = new FileOutputStream("Lab4BST.txt");
-		PrintWriter outFS = new PrintWriter(fileStream);
+		FileOutputStream fileStream = new FileOutputStream("lab4BST.txt");
+		// PrintWriter outFS = new PrintWriter(fileStream);
+		FileWriter writer = new FileWriter("lab4BST.txt");
 		
 		BST kroneBST = new BST();
 		
@@ -55,15 +56,19 @@ public class Lab4Main {
 		// TODO: breadth-first
 		System.out.println("Breadth-first");
 		System.out.println(kroneBST.breadthFirst());
+		writer.write(kroneBST.breadthFirst());
 		// inOrder
 		System.out.println("In-order");
 		System.out.println(kroneBST.inOrder(kroneBST.getRoot()));
+		writer.write(kroneBST.inOrder());
 		// preOrder
 		System.out.println("Pre-order");
 		System.out.println(kroneBST.preOrder(kroneBST.getRoot()));
+		writer.write(kroneBST.preOrder());
 		// postOrder
 		System.out.println("Post-order");
 		System.out.println(kroneBST.postOrder(kroneBST.getRoot()));
+		writer.write(kroneBST.postOrder());
 		
 		
 		System.out.print("1: Search ");

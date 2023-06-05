@@ -9,6 +9,8 @@ public class Queue extends SinglyLinkedList {
 		super();
 	}
 	// Adds a LinkNode to the back of the line.
+	// TODO: create a template version
+	// CHANGED: enqueues BSTNode obj instead of Currency obj.
 	public void enqueue(Currency toEnqueue) {
 		// Add to end of queue;
 		try {

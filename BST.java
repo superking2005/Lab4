@@ -27,6 +27,7 @@ public class BST {
 	public String breadthFirst() throws Exception {
 		return breadthFirst(root);
 	}
+	
 	public String breadthFirst(BSTNode node) throws Exception {
 		BSTNode curNode = node;
 		String toReturn = "";
